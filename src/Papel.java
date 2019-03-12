@@ -4,9 +4,11 @@ Data de criação do arquivo: 08/03/2019
 Objetivo sucinto do programa: Simular os papeis em uma peça
 Referência ao enunciado/origem do exercício: https://docs.google.com/document/d/1ewS7W5Lacoxjorj8NxD3zc2uH32P5fWOu2xqjVTWym0/edit
 */
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class Papel {
+public class Papel implements Serializable {
+	private static final long serialVersionUID = 1L;
 	private Integer ID;
 	private String nomePersonagem;
 	private BigDecimal acrescimos;
