@@ -104,7 +104,7 @@ public class Peca implements Serializable {
 		BigDecimal custoTotal = new BigDecimal("0");
 		
 		for(Papel papel : getPapeis()) {
-			custoTotal.add(papel.exibirSalarioComAcrescimos());
+			custoTotal = custoTotal.add(papel.exibirSalarioComAcrescimos());
 		}
 		
 		return custoTotal;

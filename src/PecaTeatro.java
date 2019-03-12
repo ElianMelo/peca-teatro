@@ -22,7 +22,7 @@ public class PecaTeatro {
 		// Peça 1 - Shakesphere
 		
 		// Instancia o ator juliano e atribui o papel de romeu
-		BigDecimal salarioJuliano = new BigDecimal("1.500");
+		BigDecimal salarioJuliano = new BigDecimal("1500");
 		Ator juliano = new Ator(1, "Juliano", "brasileiro", salarioJuliano);
 		
 		BigDecimal acrescimosRomeu = new BigDecimal("200");
@@ -32,11 +32,11 @@ public class PecaTeatro {
 		romeu.setAtor(juliano);
 		
 		// Instancia a atriz marieta e atribui o papel de julieta
-		BigDecimal salarioMarieta = new BigDecimal("1.800");
-		Ator marieta = new Ator(1, "Marieta", "italiana", salarioMarieta);
+		BigDecimal salarioMarieta = new BigDecimal("1800");
+		Ator marieta = new Ator(2, "Marieta", "italiana", salarioMarieta);
 		
 		BigDecimal acrescimosJulieta = new BigDecimal("300");
-		Papel julieta = new Papel(1, "Julieta", acrescimosJulieta);
+		Papel julieta = new Papel(2, "Julieta", acrescimosJulieta);
 		
 		marieta.getPapeis().add(julieta);
 		julieta.setAtor(marieta);
@@ -47,19 +47,20 @@ public class PecaTeatro {
 		
 		pecaShakesphere.getPapeis().addAll(Arrays.asList(romeu, julieta));
 		
-		// Mostra informaçoes da 
-		
-		// System.out.println();
-		
+		// Mostra informaçoes da Peça 1 - Shakesphere
 		System.out.println();
 		System.out.println("Peça 1 - Shakesphere");
 		System.out.println("Nome: " + pecaShakesphere.getTitulo());
-		System.out.println("Duração: " + pecaShakesphere.getDuracao() + "horas");
+		System.out.println("Duração: " + pecaShakesphere.getDuracao() + " horas");
 		System.out.println("Data do evento: " + formatadorData.format(pecaShakesphere.getData()));
+		System.out.println();
 	
 		for(Papel papel : pecaShakesphere.getPapeis()) {
-			System.out.println("Papel " + papel.getNomePersonagem() + ": " + papel.getAtor());
+			System.out.println("Papel " + papel.getNomePersonagem() + ": \n" + papel 
+					+ "\n" + papel.getAtor() + "\n" + "Seu preço: " + papel.exibirSalarioComAcrescimos() + "\n");
 		}
+		
+		System.out.println("Preço total da obra: " + pecaShakesphere.exibirCustoTotal());
 		
 		// Peça 2 - Star Wars
 		
