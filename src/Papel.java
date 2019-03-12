@@ -95,4 +95,13 @@ public class Papel implements Serializable {
 	public String toString() {
 		return "Papel [ID=" + ID + ", nomePersonagem=" + nomePersonagem + ", acrescimos=" + acrescimos + "]";
 	}
+	
+	public BigDecimal exibirSalarioComAcrescimos() {
+		BigDecimal salarioTotal = new BigDecimal("0");
+		
+		salarioTotal.add(ator.getSalario());
+		salarioTotal.add(this.acrescimos);
+		
+		return salarioTotal;
+	}
 }

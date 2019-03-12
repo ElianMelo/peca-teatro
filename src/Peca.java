@@ -5,6 +5,7 @@ Objetivo sucinto do programa: Simular uma peça de teatro
 Referência ao enunciado/origem do exercício: https://docs.google.com/document/d/1ewS7W5Lacoxjorj8NxD3zc2uH32P5fWOu2xqjVTWym0/edit
 */
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -97,5 +98,15 @@ public class Peca implements Serializable {
 	@Override
 	public String toString() {
 		return "Peca [ID=" + ID + ", titulo=" + titulo + ", duracao=" + duracao + ", data=" + data + "]";
+	}
+	
+	public BigDecimal exibirCustoTotal() {
+		BigDecimal custoTotal = new BigDecimal("0");
+		
+		for(Papel papel : getPapeis()) {
+			custoTotal.add(papel.exibirSalarioComAcrescimos());
+		}
+		
+		return custoTotal;
 	}
 }
