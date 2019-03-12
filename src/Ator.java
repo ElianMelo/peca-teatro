@@ -6,6 +6,8 @@ Referência ao enunciado/origem do exercício: https://docs.google.com/document/d/
 */
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Ator implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -13,6 +15,7 @@ public class Ator implements Serializable {
 	private String nome;
 	private String nacionalidade;
 	private BigDecimal salario;
+	private List<Papel> papeis = new ArrayList<>(); 
 	
 	public Ator() {
 		
@@ -56,6 +59,14 @@ public class Ator implements Serializable {
 
 	public void setSalario(BigDecimal salario) {
 		this.salario = salario;
+	}
+
+	public List<Papel> getPapeis() {
+		return papeis;
+	}
+
+	public void setPapeis(List<Papel> papeis) {
+		this.papeis = papeis;
 	}
 
 	@Override
