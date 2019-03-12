@@ -5,7 +5,9 @@ Objetivo sucinto do programa: Simular uma peça de teatro
 Referência ao enunciado/origem do exercício: https://docs.google.com/document/d/1ewS7W5Lacoxjorj8NxD3zc2uH32P5fWOu2xqjVTWym0/edit
 */
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Peca implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -13,6 +15,7 @@ public class Peca implements Serializable {
 	private String titulo;
 	private Integer duracao;
 	private Date data;
+	private List<Papel> papeis = new ArrayList<>();
 	
 	public Peca() {
 		
@@ -56,6 +59,14 @@ public class Peca implements Serializable {
 
 	public void setData(Date data) {
 		this.data = data;
+	}
+	
+	public List<Papel> getPapeis() {
+		return papeis;
+	}
+
+	public void setPapeis(List<Papel> papeis) {
+		this.papeis = papeis;
 	}
 
 	@Override
