@@ -4,6 +4,8 @@ Data de criação do arquivo: 08/03/2019
 Objetivo sucinto do programa: Simular uma peça de teatro
 Referência ao enunciado/origem do exercício: https://docs.google.com/document/d/1ewS7W5Lacoxjorj8NxD3zc2uH32P5fWOu2xqjVTWym0/edit
 */
+package br.com.sankhya.dominio;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;

@@ -4,6 +4,8 @@ Data de criação do arquivo: 14/03/2019
 Objetivo sucinto do programa: Testar a classe Peca
 Referência ao enunciado/origem do exercício: https://docs.google.com/document/d/1ewS7W5Lacoxjorj8NxD3zc2uH32P5fWOu2xqjVTWym0/edit
 */
+package br.com.sankhya.teste;
+
 import static org.junit.Assert.*;
 
 import java.math.BigDecimal;
@@ -14,6 +16,10 @@ import java.util.Date;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import br.com.sankhya.dominio.Ator;
+import br.com.sankhya.dominio.Papel;
+import br.com.sankhya.dominio.Peca;
 
 public class PecaTeste {
 	
